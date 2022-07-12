@@ -7,7 +7,7 @@ import axios from "axios";
 function Sidebar() {
 	const { user, dispatch } = useContext(Context);
 	const [cat, setCat] = useState([]);
-	const PF = "http://localhost:5000/images/";
+	const PF = "images/";
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios.get("/category");
