@@ -3,7 +3,7 @@ import "./post.css";
 
 export default function Post({ post }) {
 	const port = process.env.PORT || "http://localhost:5000";
-	const PF = `${port}/images/${post.img}`;
+	const PF = `images/${post.img}`;
 	return (
 		<div className="post">
 			{post.img && <img className="postImg" src={PF} alt="" />}
