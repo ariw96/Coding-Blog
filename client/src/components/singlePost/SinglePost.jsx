@@ -16,7 +16,7 @@ export default function SinglePost() {
 	const { user } = useContext(Context);
 	useEffect(() => {
 		const fetchData = async () => {
-			const result = await axios.get(`post/${postId}`);
+			const result = await axios.get(`/post/${postId}`);
 
 			setPost(result.data);
 		};
@@ -44,7 +44,7 @@ export default function SinglePost() {
 		<div className="singlePost">
 			<div className="singlePostWrapper">
 				{post.img && (
-					<img className="singlePostImg" src={`images/${post.img}`} alt="" />
+					<img className="singlePostImg" src={`/images/${post.img}`} alt="" />
 				)}
 				{updateMode ? (
 					<input
