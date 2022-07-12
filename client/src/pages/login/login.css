@@ -1,0 +1,63 @@
+.login {
+	height: calc(100vh - 50px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: url("https://caddac.ca/wp-content/uploads/iStock-120291474_preview.jpeg");
+	background-size: cover;
+}
+
+.loginTitle {
+	font-size: 50px;
+}
+
+.loginForm {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+}
+
+.loginForm > label {
+	margin: 10px 0;
+}
+
+.loginInput {
+	padding: 10px;
+	background-color: white;
+	border: none;
+	border-radius: 10px;
+}
+
+.loginInput:focus {
+	outline: none;
+}
+
+.loginButton {
+	margin-top: 20px;
+	cursor: pointer;
+	background-color: lightcoral;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	text-align: center;
+}
+.loginButton:disabled {
+	background-color: rgb(185, 27, 27);
+	color: white;
+	cursor: not-allowed;
+}
+
+.loginRegisterButton {
+	position: absolute;
+	top: 60px;
+	right: 20px;
+	background-color: teal;
+	cursor: pointer;
+	padding: 10px;
+	border: none;
+	color: white;
+	border-radius: 10px;
+}
