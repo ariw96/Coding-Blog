@@ -5,12 +5,14 @@ import "./singlePost.css";
 import { Context } from "../../context/Context";
 
 export default function SinglePost() {
+	const port = process.env.PORT || "http://localhost:5000";
+	const PF = `${port}/images/${post.img}`;
 	const [title, setTitle] = useState("");
 	const [desc, setDesc] = useState("");
 	const [file, setFile] = useState(null);
 	const [updateMode, setUpdateMode] = useState(false);
 	const [post, setPost] = useState({});
-	const PF = `http://localhost:5000/images/${post.img}`;
+
 	const postId = window.location.pathname.split("/")[2];
 	const { user } = useContext(Context);
 	useEffect(() => {

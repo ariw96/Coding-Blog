@@ -5,13 +5,15 @@ import { useContext, useState } from "react";
 import axios from "axios";
 
 export default function Settings() {
+	const port = process.env.PORT || "http://localhost:5000";
+	const PF = `${port}/images/`;
 	const { user, dispatch } = useContext(Context);
 	const [file, setFile] = useState(null);
 	const [username, setUsername] = useState("");
 	// const [password, setPassword] = useState("password");
 	const [success, setSuccess] = useState(false);
 	const [email, setEmail] = useState("");
-	const PF = "http://localhost:5000/images/";
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		dispatch({ type: "UPDATE_START" });
