@@ -31,8 +31,9 @@ export default function Settings() {
 			updatedUser.profilePic = filename;
 			try {
 				await axios.post("/upload", formData);
+				console.log("uploaded");
 			} catch (e) {
-				console.log(e);
+				console.log("upload error");
 				dispatch({ type: "UPDATE_FAIL" });
 			}
 		}

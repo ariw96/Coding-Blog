@@ -6,7 +6,6 @@ import { Context } from "../../context/Context";
 
 export default function SinglePost() {
 	const port = process.env.PORT || "http://localhost:5000";
-	const PF = `images/${post.img}`;
 	const [title, setTitle] = useState("");
 	const [desc, setDesc] = useState("");
 	const [file, setFile] = useState(null);
@@ -40,6 +39,7 @@ export default function SinglePost() {
 			console.log(err);
 		}
 	};
+	const PF = `images/${post.img}`;
 	return (
 		<div className="singlePost">
 			<div className="singlePostWrapper">
