@@ -39,11 +39,13 @@ export default function SinglePost() {
 			console.log(err);
 		}
 	};
-	const PF = `images/${post.img}`;
+
 	return (
 		<div className="singlePost">
 			<div className="singlePostWrapper">
-				{post.img && <img className="singlePostImg" src={PF} alt="" />}
+				{post.img && (
+					<img className="singlePostImg" src={`images/${post.img}`} alt="" />
+				)}
 				{updateMode ? (
 					<input
 						type="text"
