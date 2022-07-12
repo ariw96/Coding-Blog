@@ -6,7 +6,7 @@ import axios from "axios";
 
 export default function Settings() {
 	const port = process.env.PORT || "http://localhost:5000";
-	const PF = `${port}/images/`;
+	const PF = `images/`;
 	const { user, dispatch } = useContext(Context);
 	const [file, setFile] = useState(null);
 	const [username, setUsername] = useState("");
