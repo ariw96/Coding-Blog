@@ -31,9 +31,7 @@ export default function Settings() {
 			updatedUser.profilePic = filename;
 			try {
 				await axios.post("/upload", formData);
-				console.log("uploaded");
 			} catch (e) {
-				console.log("upload error");
 				dispatch({ type: "UPDATE_FAIL" });
 			}
 		}
@@ -41,6 +39,7 @@ export default function Settings() {
 			const res = await axios.put("/user/" + updatedUser.userId, updatedUser);
 			setSuccess(true);
 			dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
+
 			window.location.replace("/");
 		} catch (e) {
 			console.log("error", e);
